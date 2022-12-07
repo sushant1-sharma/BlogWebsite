@@ -1,0 +1,12 @@
+<%- include('partials/header'); -%>
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% Postdata.forEach(function(PostData){ %>
+<h2><%= PostData.Title %></h2>
+<p><%=  PostData.Post.substring(0,100)+ "....." %>
+<a href="/posts/<%= PostData.Title %>">Read More</a>
+</p>
+<%})%>
+<%- include('partials/footer'); -%>
+
